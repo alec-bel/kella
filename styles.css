@@ -27,12 +27,12 @@ a {
 }
 
 #about_me {
-    margin: 10%
+    margin: 10%:
 }
 
 #beach_pic {
     background-image: url("img/beach.jpg");
-      }
+}
 
 .background {
     width: 100%;
