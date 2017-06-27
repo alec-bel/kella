@@ -1,4 +1,36 @@
-#wave {
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, p  {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    color: whitesmoke;
+}
+
+h1 {
+    font-style: bold;
+    font-size: 4em;
+    margin: 10% 0% 0% 10%;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#prof_title {
+    font-style: italic;
+    margin: 0% 10% 0% 10%;
+}
+
+#about_me {
+    margin: 10%
+}
+
+#beach_pic {
     background-image: url("img/beach.jpg");
       }
 
@@ -8,40 +40,15 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-        
-html, body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-        
-h1, h2, p  {
-    font-family: Verdana, Geneva, sans-serif;
-    font-weight: normal;
-    color: whitesmoke;
-}
-        
-h1 {
-    font-style: bold;
-    font-size: 4em;
-}
- 
-a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-        
-h2 {
-    font-style: italic;
-}
-        
+
 .fa {
     float: right;
-    font-size: 30px;
+    font-size: 2em; 
     color: whitesmoke;
-    padding: 2em;
+    padding: .5em;
 }
-        
+
 .fa:hover {
     color: lightgrey;
 }
+
