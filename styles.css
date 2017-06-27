@@ -1,0 +1,75 @@
+        #wave {
+            background-image: url("img/beach.jpg");
+        }
+        
+        #mod {
+            background-color: cadetblue;
+        }
+        
+        .background {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #positionMe {
+            padding-top: 20em;
+            padding-left: 15em;
+        }
+        
+        h1, h2, p  {
+            font-family: Verdana, Geneva, sans-serif;
+            font-weight: normal;
+            color: whitesmoke;
+        }
+        
+        h1 {
+            font-style: bold;
+            font-size: 4em;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        
+        h2 {
+            margin-left: 10px;
+            margin-top: 0px;
+            font-style: italic;
+        
+        }
+        
+        p {
+            margin-top: 100px;
+        }
+        
+        .fa {
+            float: right;
+            font-size: 30px;
+            color: whitesmoke;
+            padding: 20px;
+        }
+        
+        .fa:hover {
+            color: black;
+        }
+        
+        #social-links {
+            margin-top: 5em;
+        }
+        
+        .variable {
+            color: red;
+        }
