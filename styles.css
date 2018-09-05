@@ -50,7 +50,7 @@ a {
 }
 
 .fa:hover {
-    color: lightgrey;
+    color: #bababa;
 }
 
 @media screen and (max-width: 768px){
