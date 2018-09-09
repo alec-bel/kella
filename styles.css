@@ -1,38 +1,10 @@
-html, body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-
-h1, h2, p  {
-    font-family: Verdana, Geneva, sans-serif;
-    font-weight: normal;
-    color: whitesmoke;
-}
-
-h1 {
-    font-style: bold;
-    font-size: 4em;
-    margin: 21% 0% 0% 15%;
-}
-
-a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-#prof_title {
-    font-style: italic;
-    margin: 0% 0% 0% 15%;
-}
-
-#about_me {
-    margin: 5% 0% 10% 15%
-}
-
 #beach_pic {
     background-image: url("img/hawaii.JPG");
-      }
+ }
+
+#game {
+    background-color: cadetblue;
+}
 
 .background {
     width: 100%;
@@ -41,23 +13,61 @@ a {
     background-size: 100% 100%;
 }
 
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#positionMe {
+    padding-top: 20em;
+    padding-left: 15em;
+}
+
+h1, h2, p  {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    color: 	whitesmoke;
+}
+
+h1 {
+    font-style: bold;
+    font-size: 4em;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+h2 {
+    margin-left: 10px;
+    margin-top: 0px;
+    font-style: italic;
+
+}
+
+p {
+    margin-top: 100px;
+}
+
 .fa {
     float: right;
-    font-size: 2em; 
+    font-size: 30px;
     color: whitesmoke;
-    padding: .5em;
+    padding: 20px;
 }
 
 .fa:hover {
-    color: #bababa;
+    color: black;
 }
-/*
-@media screen and (max-width: 768px){
-    h1 {
-        margin-top: 45%; 
-    }
-    .fa {
-	margin-top: 20%;
-    }
+
+#social-links {
+    margin-top: 5em;
 }
-*/
+
+.variable {
+    color: red;
+}
