@@ -25,9 +25,11 @@
 </head>
 <body>
     <div class="background" id="beach_pic">
-        <a href="index.html"><h1>Kevin Edington</h1></a>
-        <a href="https://en.wikipedia.org/wiki/Software_engineer"><h2 id="prof_title">Software Engineer</h2></a>
-        <p id="about_me">I am cool and i do <a href="#" id="scroll">cool stuff</a></p>
+        <div id="positionMe">
+            <a href="index.html"><h1>Kevin Edington</h1></a>
+            <a href="https://en.wikipedia.org/wiki/Software_engineer"><h2 id="prof_title">Software Engineer</h2></a>
+            <p id="about_me">I am cool and i do <a href="#" id="scroll">cool stuff</a></p>
+        </div>
         <div id="social-links">
             <nav>
                 <a href="https://www.linkedin.com/in/kevin-edington/"><i class="fa fa-linkedin"></i></a>
@@ -37,10 +39,10 @@
             </nav>
         </div>
     </div>
-     <div id="game" class="background">
+    <div id="game" class="background">
         <h1>Kevin's Amazing Game!</h1>
         <canvas id="game_canvas" width="1050" height="600"></canvas>
-         <script>
+        <script>
         const second = 1000;
         
         var canvas;
@@ -121,8 +123,7 @@
                 changeX = 0;
                 changeY = 15;
             }   
-        });
-                                  
+        });                         
     </script>
     </div>  
 </body>
