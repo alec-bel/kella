@@ -73,5 +73,5 @@ p {
 }
 
 @media all and (max-width: 1049px) {
-    .content #game{display:none;}
+    #game{display:none;}
 }
