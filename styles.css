@@ -74,4 +74,8 @@ p {
 
 @media all and (max-width: 1049px) {
     #game{display:none;}
+    #positionMe {
+        padding-top: 0em;
+        padding-left: 0em;
+    }   
 }
