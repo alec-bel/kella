@@ -1,27 +1,7 @@
-#beach_pic {
-    background-image: url("img/hawaii.JPG");
- }
-
-#game {
-    background-color: cadetblue;
-}
-
-.background {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
 html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-}
-
-#positionMe {
-    padding-top: 20em;
-    padding-left: 15em;
 }
 
 h1, h2, p  {
@@ -37,20 +17,26 @@ h1 {
     margin: 0px;
 }
 
+h2 {
+    margin-left: 10px;
+    margin-top: 0px;
+    font-style: italic;
+}
+
+p {
+    margin-top: 100px;
+}
+
 a {
     text-decoration: none;
     color: whitesmoke;
 }
 
-h2 {
-    margin-left: 10px;
-    margin-top: 0px;
-    font-style: italic;
-
-}
-
-p {
-    margin-top: 100px;
+.background {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .fa {
@@ -64,12 +50,21 @@ p {
     color: black;
 }
 
-#social-links {
-    margin-top: 5em;
+#beach_pic {
+    background-image: url("img/hawaii.JPG");
+ }
+
+#game {
+    background-color: cadetblue;
 }
 
-.variable {
-    color: red;
+#positionMe {
+    padding-top: 20em;
+    padding-left: 15em;
+}
+
+#social-links {
+    margin-top: 5em;
 }
 
 @media all and (max-width: 1049px) {
