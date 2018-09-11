@@ -40,7 +40,6 @@ a {
 }
 
 .fa {
-    float: right;
     font-size: 30px;
     color: whitesmoke;
     padding: 20px;
@@ -64,7 +63,9 @@ a {
 }
 
 #social-links {
-    margin-top: 5em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 @media all and (max-width: 1049px) {
