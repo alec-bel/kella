@@ -1,3 +1,9 @@
+ var options = {
+            strings: ["<i>Programming </i>", "<i>Problem Solving</i>"],
+            typeSpeed: 40
+        }
+var typed = new Typed("#typed", options);
+
 const second = 1000;
 
 var canvas;
