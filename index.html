@@ -15,6 +15,9 @@
     <!-- Animations https://github.com/daneden/animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     
+    <!-- Typed https://github.com/mattboldt/typed.js/ -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    
      <!-- JQuery --> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script>
@@ -25,6 +28,12 @@
                 }, 1000);
             });
         });
+        
+        var options = {
+            strings: ["<i>Programming</i>", "<i>Problem Solving</i>"],
+            typeSpeed: 40
+        }
+        var typed = new Typed(".element", options);
     </script>
     <script src="Game.js"></script>
 </head>
@@ -33,7 +42,7 @@
         <div id="positionMe" class="animated fadeInLeft slow">
             <a href="index.html"><h1>Kevin Edington</h1></a>
             <a href="https://en.wikipedia.org/wiki/Software_engineer"><h2 id="prof_title">Software Engineer</h2></a>
-            <p id="about_me">I am cool and i do <a href="#" id="scroll">cool stuff</a></p>
+            <p id="about_me">Passion for<a href="#" id="scroll" class="element">cool stuff</a></p>
         </div>
         <div id="social-links" class="animated fadeInRight slow">
             <nav>
