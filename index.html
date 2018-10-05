@@ -17,14 +17,6 @@
     
     <!-- Typed https://github.com/mattboldt/typed.js/ -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script defer>
-      var typed = new Typed('#typed', {
-        strings: ['<i>Programming</i>', '<i>Problem Solving</i>', '<i>Productivity</i>'],
-        typeSpeed: 40,
-        backSpeed: 40,
-        loop: true
-      });
-    </script>
     
      <!-- JQuery --> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
@@ -34,6 +26,12 @@
                 $('html, body').animate({
                     scrollTop: $("#game").offset().top
                 }, 1000);
+            });
+            var typed = new Typed('#typed', {
+                strings: ['<i>Programming</i>', '<i>Problem Solving</i>', '<i>Productivity</i>'],
+                typeSpeed: 40,
+                backSpeed: 40,
+                loop: true
             });
         });
     </script>
