@@ -50,15 +50,11 @@ a {
     color: DarkGrey;
 }
 
-#beach_pic {
+#page-one {
     background-image: url("img/WindAndSea.jpg");
- }
-
-#game {
-    background-color: cadetblue;
 }
 
-#positionMe {
+#about-me {
     padding-top: 20em;
     padding-left: 15em;
 }
@@ -70,13 +66,13 @@ a {
 }
 
 @media all and (max-width: 1049px) {
-    #positionMe {
+    #about-me {
         padding-top: 0em;
         padding-left: 0em;
     }   
 }
 
-div.slow {
+.animated.slow {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
 }
