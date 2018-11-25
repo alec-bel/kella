@@ -55,7 +55,7 @@ a {
 }
 
 #about-me {
-    padding-top: 20em;
+    padding-top: 15em;
     padding-left: 15em;
 }
 
@@ -68,7 +68,7 @@ a {
 @media all and (max-width: 1049px) {
     #about-me {
         padding-top: 0em;
-        padding-left: 0em;
+        padding-left: 1em;
     }   
 }
 
