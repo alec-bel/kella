@@ -20,13 +20,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#scroll").click(function() {
-                $('html, body').animate({
-                    scrollTop: $("#game").offset().top
-                }, 1000);
-            });
             var typed = new Typed('#typed', {
-                strings: ['<i>Programming</i>', '<i>Problem Solving</i>', '<i>Productivity</i>'],
+                strings: ['Programming', 'Problem Solving', 'Productivity'],
                 typeSpeed: 40,
                 backSpeed: 40,
                 loop: true
@@ -37,9 +32,9 @@
 <body>
     <div class="background">
         <div class="animated fadeInLeft slow" id="about-me">
-            <h1><a href="index.html">Kevin Edington</a></h1>
-            <h2><a href="https://en.wikipedia.org/wiki/Software_engineer">Software Engineer</a></h2>
-            <p>Passion for <a href="#" id="scroll"><span id="typed"></span></a></p>
+            <h1 id="name-title"><a href="index.html">Kevin Edington</a></h1>
+            <h2 id="job-title"><a href="https://en.wikipedia.org/wiki/Software_engineer">Software Engineer</a></h2>
+            <p>Passion for <i id="typed"></i></p>
         </div>
         <div id="social-links" class="animated fadeInRight slow">
             <nav>

@@ -1,36 +1,19 @@
 html, body {
     height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
 }
 
-h1, h2, p  {
+h1, h2, p {
     font-family: Verdana, Geneva, sans-serif;
     font-weight: normal;
     color: 	whitesmoke;
 }
 
-h1 {
-    font-style: bold;
-    font-size: 4em;
-    padding: 0px;
-    margin: 0px;
-}
-
-h2 {
-    margin-left: 10px;
-    margin-top: 0px;
-    font-style: italic;
-}
-
-p {
-    margin-top: 100px;
-}
-
 a {
-    text-decoration: none;
-    color: whitesmoke;
+	text-decoration: none;
+    color: 	whitesmoke;
 }
 
 .background {
@@ -41,18 +24,29 @@ a {
 }
 
 .fa {
-    font-size: 30px;
     color: whitesmoke;
+    font-size: 30px;
     padding: 20px;
 }
 
 .fa:hover {
-    color: DarkGrey;
+    color: silver;
 }
 
 #about-me {
     padding-top: 15em;
     padding-left: 15em;
+}
+
+#name-title {
+	font-size: 4em;
+    font-style: bold;
+	margin: 0px;
+	padding: 0px;
+}
+
+#job-title {
+	font-style: italic
 }
 
 #social-links {
