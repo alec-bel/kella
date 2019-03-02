@@ -2,4 +2,5 @@
 
 Personal Website with social links.
 
-Added my Amazing Game!
+Using [Squoosh](https://squoosh.app/) for image compression.
+
