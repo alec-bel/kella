@@ -8,9 +8,10 @@ Personal Website with social links.
 [instagram](https://www.instagram.com/kevin_edington/)
 [twitter](https://twitter.com/kevin_edington)
 [spotify](https://open.spotify.com/user/1223205470)
-[stack overflow](https://stackoverflow.com/users/9756127/kevin-edington?tab=profile)
-[angel list](https://angel.co/kevin-edington)
+[stackoverflow](https://stackoverflow.com/users/9756127/kevin-edington?tab=profile)
+[angellist](https://angel.co/kevin-edington)
 [meetup](https://www.meetup.com/members/231315008/)
+[leetcode](https://leetcode.com/kedington/)
 
 Using [Squoosh](https://squoosh.app/) for image compression.
 
