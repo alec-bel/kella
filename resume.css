@@ -1,0 +1,36 @@
+body {
+	background-color: rgb(245,245,245);
+}
+
+.work-experience {
+	background-color: rgb(255,255,255);`
+	border: 0;
+	margin: 10px 50px;
+	padding: 50px;
+}
+
+.logo {
+	height: 56px;
+	width: 56px;
+}
+
+.title {
+	font-weight: bold;
+}
+
+.company {
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+}
+
+.date {
+	font-style: italic;
+}
+
+.block {
+	display: inline-block;
+	margin-left: 50px
+}
