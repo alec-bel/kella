@@ -12,6 +12,7 @@ Personal Website with social links.
 [angellist](https://angel.co/kevin-edington)
 [meetup](https://www.meetup.com/members/231315008/)
 [leetcode](https://leetcode.com/kedington/)
+[venmo](https://venmo.com/kevin-edington)
 
 Using [Squoosh](https://squoosh.app/) for image compression.
 
