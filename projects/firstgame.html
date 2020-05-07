@@ -1,5 +1,9 @@
 <html>
-    <h1>Kevin's Amazing Game!</h1>
+    <h1 style="float: left; font-family: Arial, Helvetica, sans-serif;">Kevin's Amazing Game!</h1>
+    <div style="padding-left: 500; padding-top: 3px;">
+        <p id="deaths">Deaths: 0</p>
+        <p id ="level">Level: 0</p>
+    </div>
     <canvas id="game_canvas" width="1050" height="600"></canvas>
 
     <script>
@@ -14,20 +18,19 @@
         var changeY = 0;
         var objectWidth = 15;
         var objectHeight = 15;
+        
+        var walls = new Set()
+        var numOfWalls = 0
+        var deathCount = 0
+        var level = 0
+        
+        var winPhrases = ["You win!", "That was easy", "Great Moves", "Ez", "Nice Work", "Pog"]
+    
         window.onload = function(){
             canvas = document.getElementById('game_canvas');
             canvasContext = canvas.getContext('2d');
-            drawMaze();
             var fps = 15;
             setInterval(drawMovement, second/fps);
-        }
-        
-        function drawMaze() {
-             canvasContext.fillStyle = "black";
-             canvasContext.fillRect(0,0,canvas.width, canvas.height);
-             canvasContext.fillRect(0,0,canvas.width, 25);
-             canvasContext.fillRect(0,100, canvas.width/2, 25)
-             canvasContext.fillRect(canvas.width/2 + 100,100, canvas.width/2, 25)
         }
         
         function restart() {
@@ -35,24 +38,40 @@
             posY = 30;
             changeX = 15;
             changeY = 0;  
+            
+            deathCount += 1
+            document.getElementById("deaths").innerHTML = "Deaths : " + String(deathCount);
         }
         
         function drawMovement() {
             canvasContext.fillStyle = "white";
             canvasContext.fillRect(0,0,canvas.width, canvas.height);
             levelOne();
+            drawWalls();
             canvasContext.fillStyle = "lightblue";
             canvasContext.fillRect(posX, posY, objectWidth, objectHeight);
             posX += changeX;
             posY += changeY
             if (posY >= canvas.height - 90 && posY <= canvas.height - 30) {
                 if (posX > canvas.width) {
-                    alert("You win");
+                    alert(winPhrases[Math.floor(Math.random() * winPhrases.length)]);
+                    deathCount -= 1
                     restart();
+                    numOfWalls += 30
+                    generateWalls()    
+                    level += 1
+                    document.getElementById("level").innerHTML = "Level: " + String(level);
                 }
             }
             else if (posX < 15 || posX > canvas.width - 30 || posY < 15 || posY > canvas.height - 30) {
                 restart();
+            }
+            else if (walls) {
+                for (wall of walls) {
+                    if (posX-15 < wall[0] && posX > wall[0] - 15 && posY-15 < wall[1] && posY > wall[1] -15) {
+                        restart();
+                    }   
+                }
             }
             canvasContext.fillStyle = "blue";
             canvasContext.fillRect(posX, posY, objectWidth, objectHeight);
@@ -66,6 +85,26 @@
             canvasContext.fillRect(canvas.width-15, 0, 15, canvas.height-60);  
         }
         
+        
+        function drawWalls() {
+            for (wall of walls) {
+                canvasContext.fillRect(wall[0],wall[1], 15, 15);
+            }
+        }
+        
+        // Randomly Generate the Walls
+        function generateWalls() {
+            walls = new Set()
+            while (walls.size < numOfWalls) {
+                let wallX = Math.floor(Math.random() * canvas.width)
+                let wallY = Math.floor(Math.random() * canvas.height)
+                if (!((wallX < 60 &&  wallY < 60) || (wallX > canvas.width-60 && wallY > canvas.height-60))) {
+                    walls.add([wallX, wallY])
+                }
+            }
+        }
+        
+        // Movement 
         document.addEventListener('keydown', function(event) {
             if(event.keyCode == 37){
                 changeX = -15;
@@ -83,6 +122,5 @@
                 changeX = 0;
                 changeY = 15;
             }   
-        });
-                                  
+        });                                
     </script>
