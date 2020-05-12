@@ -1,11 +1,56 @@
 <html>
-    <h1 style="float: left; font-family: Arial, Helvetica, sans-serif;">Kevin's Amazing Game!</h1>
-    <div style="padding-left: 500; padding-top: 3px;">
-        <p id="deaths">Deaths: 0</p>
-        <p id ="level">Level: 0</p>
-    </div>
-    <canvas id="game_canvas" width="1050" height="600"></canvas>
+    <head>
+        <style>
 
+        h1 {
+          float: left; font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #score {
+          padding-left: 500; padding-top: 3px;
+        }
+        
+        #small {
+            display: none;
+        }
+
+        #message { 
+            text-align: center;
+        } 
+
+        #error-image {
+             display: block;
+             margin: 0 auto; 
+        }
+        
+        @media only screen and (max-width: 1026px) { 
+            #game { 
+                display: none; 
+            } 
+            #small {
+                display: block;
+                    
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+       <div id="game"> 
+               <h1>Kevin's Amazing Game!</h1>
+               <div id="score">
+                  <p id="deaths">Deaths: 0</p>
+                  <p id ="level">Level: 0</p>
+               </div>
+               <canvas id="game_canvas" width="1050" height="600"></canvas>
+        </div>
+
+       <div id="small">
+          <h1 id="message">This game can only be played on desktop</h1>
+          <img id="error-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRAywve2l4eV1VRmBrEvHzaMOJsmMk9R3fQVY04SuOAxlbQKlVv&usqp=CAU">
+       </div>
+
+    </body>
     <script>
         const second = 1000;
         
