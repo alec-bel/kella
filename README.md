@@ -17,4 +17,4 @@ Personal Website with social links.
 Using [Squoosh](https://squoosh.app/) for image compression.
 
 
-# [Amazing Game](https://kedington.github.io/project/firstgame)
+[Amazing Game](https://kedington.github.io/projects/firstgame)
