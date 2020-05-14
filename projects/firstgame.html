@@ -1,5 +1,4 @@
-<html>
-    <head>
+<html> <head>
         <style>
 
         h1 {
@@ -53,6 +52,7 @@
     </body>
     <script>
         const second = 1000;
+        const wallCollor = "lightgrey"
         
         var canvas;
         var canvasContext;
@@ -70,6 +70,10 @@
         var level = 0
         
         var winPhrases = ["You win!", "That was easy", "Great Moves", "Ez", "Nice Work", "Pog"]
+
+        var visited = []
+        var deaths = []
+    
     
         window.onload = function(){
             canvas = document.getElementById('game_canvas');
@@ -78,14 +82,29 @@
             setInterval(drawMovement, second/fps);
         }
         
+        function win() {
+             level += 1;
+             document.getElementById("level").innerHTML = "Level: " + String(level);
+             numOfWalls += 30;
+             deaths = [];
+             generateWalls();
+             restart();
+        }
+
+        function death() {
+            deaths.push([posX, posY]);
+            deathCount += 1;
+            document.getElementById("deaths").innerHTML = "Deaths : " + String(deathCount);
+            restart();
+        }
+        
         function restart() {
             posX = 15;
             posY = 30;
-            changeX = 15;
+            changeX = 0;
             changeY = 0;  
-            
-            deathCount += 1
-            document.getElementById("deaths").innerHTML = "Deaths : " + String(deathCount);
+
+            visited = []
         }
         
         function drawMovement() {
@@ -95,26 +114,32 @@
             drawWalls();
             canvasContext.fillStyle = "lightblue";
             canvasContext.fillRect(posX, posY, objectWidth, objectHeight);
+            visited.push([posX, posY])
             posX += changeX;
             posY += changeY
-            if (posY >= canvas.height - 90 && posY <= canvas.height - 30) {
-                if (posX > canvas.width) {
-                    alert(winPhrases[Math.floor(Math.random() * winPhrases.length)]);
-                    deathCount -= 1
-                    restart();
-                    numOfWalls += 30
-                    generateWalls()    
-                    level += 1
-                    document.getElementById("level").innerHTML = "Level: " + String(level);
-                }
+            
+            if (posY >= canvas.height - 60  && posX >= canvas.width-15) {
+                    for (visit of visited) {
+                        canvasContext.fillStyle = "lightblue";
+                        canvasContext.fillRect(visit[0], visit[1], objectWidth, objectHeight);
+                    }
+
+                    for (d of deaths) {
+                        canvasContext.fillStyle = "lightcoral";
+                        canvasContext.fillRect(d[0], d[1], objectWidth, objectHeight);
+                    }
+                    if (posX > canvas.width-15) {
+                        alert(winPhrases[Math.floor(Math.random() * winPhrases.length)]);
+                        win();
+                    }
             }
-            else if (posX < 15 || posX > canvas.width - 30 || posY < 15 || posY > canvas.height - 30) {
-                restart();
+            else if (posX <= 0 || posX >= canvas.width - 15 || posY <= 0 || posY >= canvas.height - 15) {
+               death(); 
             }
             else if (walls) {
                 for (wall of walls) {
                     if (posX-15 < wall[0] && posX > wall[0] - 15 && posY-15 < wall[1] && posY > wall[1] -15) {
-                        restart();
+                        death();
                     }   
                 }
             }
@@ -123,7 +148,7 @@
         }
         
         function levelOne() {
-            canvasContext.fillStyle = "lightgrey";
+            canvasContext.fillStyle = wallCollor
             canvasContext.fillRect(0,0, canvas.width, 15);
             canvasContext.fillRect(0,60, 15, canvas.height-60);
             canvasContext.fillRect(0, canvas.height-15, canvas.width, 15);
