@@ -18,7 +18,7 @@ a {
 
 .background {
     height: 100%;
-    background-image: url("img/malaga.jpg");
+    background-image: url("img/film.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -33,26 +33,33 @@ a {
     color: silver;
 }
 
-#about-me {
-    padding-top: 8em;
-    padding-left: 8em;
-}
-
 #name-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	font-size: 4em;
     font-style: bold;
 	margin: 0px;
 	padding: 0px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 3em;
 }
 
 #job-title {
-	font-style: italic
+	font-style: italic;
+    display: none;
 }
 
 #social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    bottom: 0;
+    left: 0;
     right: 0;
+    bottom: 0;
 }
 
 @media all and (max-width: 1049px) {
