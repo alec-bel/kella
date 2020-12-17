@@ -21,7 +21,7 @@ a {
     background-image: url("img/film.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
+    background-position: center;
 }
 
 .fa {
@@ -38,12 +38,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-	font-size: 4em;
-    font-style: bold;
     position: absolute;
     right: 0;
     left: 0;
-    top: 18%;
+    top: 15%;
 }
 
 #job-title {
