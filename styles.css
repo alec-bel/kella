@@ -40,12 +40,10 @@ a {
     align-items: center;
 	font-size: 4em;
     font-style: bold;
-	margin: 0px;
-	padding: 0px;
     position: absolute;
     right: 0;
     left: 0;
-    top: 3em;
+    top: 18%;
 }
 
 #job-title {
@@ -60,14 +58,7 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-}
-
-@media all and (max-width: 1049px) {
-    #about-me {
-        padding-top: 0em;
-        padding-left: 1em;
-    }   
+    bottom: 10%;
 }
 
 .animated.slow {
