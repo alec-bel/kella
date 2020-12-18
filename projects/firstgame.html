@@ -44,6 +44,7 @@
         }
 
         </style>
+
     </head>
     <body>
        <div id="game"> 
@@ -204,5 +205,20 @@
                 changeY = 15;
             }   
         });                                
+    </script>
+    <script>
+        function iniFrame() { 
+
+            if(window.self !== window.top) { 
+          
+            var elm = document.getElementById('game');
+            elm.style.display = "block";
+
+            var elm = document.getElementById('error');
+            elm.style.display = "none";
+            } 
+        } 
+  
+        iniFrame(); 
     </script>
 </html>
