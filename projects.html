@@ -1,0 +1,63 @@
+<!DOCTYPE html >
+<html> 
+    <head>
+        <title>Home Payment Calculator</title>
+        <style type="text/css">
+            .thumbnail { /* the width and height here are your resultant sizes. */
+                    width: 400px;
+                    height: 300px;
+                    float:left;
+                    margin:20px;
+                    position: relative;
+                }
+                 
+                .thumbnail iframe {  /* the width and height here are your "unshrunken" sizes.  Important bc of the scale variable later. */
+                    position: relative;
+                    z-index: 1;
+                    width: 1000px;   
+                    height: 750px;
+                    pointer-events: none;
+                 
+                    -webkit-transform-origin: 0 0;
+                    -moz-transform-origin: 0 0;
+                    transform-origin: 0 0;
+
+                 
+                    -webkit-transform:  scale(0.4, 0.4);   /* Gets the size down to fit into your .thumbnail. */
+                    -moz-transform:  scale(0.4, 0.4);      /* Gets the size down to fit into your .thumbnail. */
+                    transform:  scale(0.4, 0.4);           /* Gets the size down to fit into your .thumbnail. */
+                    overflow: hidden;
+
+                }
+
+                a {
+                    display: block;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="thumbnail"> 
+        <a href="projects/leetcode.html">
+        <iframe src="leetcode.com"></iframe>
+        </a>
+        </div> 
+
+        <div class="thumbnail"> 
+        <a href="projects/firstgame.html">
+        <iframe src="projects/firstgame.html"></iframe>
+        </a>
+        </div> 
+
+        <div class="thumbnail"> 
+        <a href="projects/home-buying-calculator.html">
+        <iframe src="projects/home-buying-calculator.html"></iframe>
+        </a>
+        </div> 
+
+        <div class="thumbnail"> 
+        <a href="https://github.com/kedington/vestaboard">
+        <iframe src="https://web.vestaboard.com/simulator/9633c528-1404-4b34-8fe3-c4c2f1e4c9e5"></iframe>
+        </a>
+        </div> 
+    </body>
+</html>
