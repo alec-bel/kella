@@ -5,10 +5,34 @@
         h1 {
           float: left; font-family: Arial, Helvetica, sans-serif;
         }
+
+        button {
+	  background-color: #e7e7e7; 
+	  border: none;
+	  color: black;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	}
+
+	button:hover {
+  	  background-color: lightgrey;
+        }
         
         #score {
-          padding-left: 500; padding-top: 3px;
+	  float: left;
+	  padding: 0px 75px;
         }
+	
+	#buttons {
+           padding-top: 15px;
+	}
+	canvas {
+	   float: None;
+	}
+	
         
         #error {
             display: none;
@@ -53,6 +77,12 @@
                   <p id="deaths">Deaths: 0</p>
                   <p id ="level">Level: 0</p>
                </div>
+	       <div id="buttons">
+	          <button onclick="try_game()">Try Game</button>
+	          <button onclick="share_game()">Share Game</button>
+	          <button onclick="restart_game()">Restart Game</button>
+	       </div>
+	       <div style="clear:both;"></div>
                <canvas id="game_canvas" width="1050" height="600"></canvas>
         </div>
 
@@ -126,6 +156,32 @@
             localStorage.setItem("level", level);
             localStorage.setItem("deathCount", deathCount);
         }
+
+	function restart_game() {
+	    walls = new Set()
+            numOfWalls = 0
+            deathCount = 0
+            level = 0
+            deaths = []
+            restart()
+	    update()
+	}
+	
+	function share_game() {
+	    navigator.clipboard.writeText(JSON.stringify(Array.from(walls)))
+	}
+
+	function try_game() {
+	  let wall_info = prompt("Please enter game info:", "");
+	  if (wall_info == null || wall_info == "") {
+	  } else {
+	    walls = new Set(JSON.parse(wall_info))
+            numOfWalls = walls.size
+	    level = numOfWalls / 30
+	    restart()
+	    update()
+	  }
+	}
         
         function drawMovement() {
             canvasContext.fillStyle = "white";
