@@ -78,9 +78,10 @@
         
         var walls = new Set()
         var numOfWalls = 0
-        var deathCount = 0
-        var level = 0
-        
+        var deathCount = Number(localStorage.getItem("deathCount")) || 0
+        var level = Number(localStorage.getItem("level")) || 0
+        update()
+
         var winPhrases = ["You win!", "That was easy", "Great Moves", "Ez", "Nice Work", "Pog"]
 
         var visited = []
@@ -96,7 +97,7 @@
         
         function win() {
              level += 1;
-             document.getElementById("level").innerHTML = "Level: " + String(level);
+             update();
              numOfWalls += 30;
              deaths = [];
              generateWalls();
@@ -106,8 +107,13 @@
         function death() {
             deaths.push([posX, posY]);
             deathCount += 1;
-            document.getElementById("deaths").innerHTML = "Deaths : " + String(deathCount);
+            update();
             restart();
+        }
+
+        function update() {
+            document.getElementById("deaths").innerHTML = "Deaths : " + String(deathCount);
+            document.getElementById("level").innerHTML = "Level: " + String(level);
         }
         
         function restart() {
@@ -117,6 +123,8 @@
             changeY = 0;  
 
             visited = []
+            localStorage.setItem("level", level);
+            localStorage.setItem("deathCount", deathCount);
         }
         
         function drawMovement() {
