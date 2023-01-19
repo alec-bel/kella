@@ -76,8 +76,8 @@
         var objectWidth = 15;
         var objectHeight = 15;
         
-        var walls = new Set()
-        var numOfWalls = 0
+        var walls = new Set(JSON.parse(localStorage.getItem("walls"))) || new Set()
+        var numOfWalls = walls.size
         var deathCount = Number(localStorage.getItem("deathCount")) || 0
         var level = Number(localStorage.getItem("level")) || 0
         update()
@@ -192,6 +192,7 @@
                     walls.add([wallX, wallY])
                 }
             }
+	    localStorage.setItem("walls", JSON.stringify(Array.from(walls)));
         }
         
         // Movement 
