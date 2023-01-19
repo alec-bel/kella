@@ -80,8 +80,6 @@
         var numOfWalls = 0
         var deathCount = Number(localStorage.getItem("deathCount")) || 0
         var level = Number(localStorage.getItem("level")) || 0
-        document.getElementById("level").innerHTML = "Level: " + String(level);
-        document.getElementById("deaths").innerHTML = "Deaths : " + String(deathCount);
         update()
 
         var winPhrases = ["You win!", "That was easy", "Great Moves", "Ez", "Nice Work", "Pog"]
