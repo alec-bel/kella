@@ -5,6 +5,11 @@
         h1 {
           float: left; font-family: Arial, Helvetica, sans-serif;
         }
+	
+	#game {
+	  display: grid;
+	  place-items: center;
+	}
 
         button {
 	  background-color: #e7e7e7; 
@@ -22,17 +27,19 @@
         }
         
         #score {
-	  float: left;
-	  padding: 0px 75px;
+	   display: flex;
+        }
+
+	#deaths {
+	   padding-right: 50px;
         }
 	
 	#buttons {
-           padding-top: 15px;
+           padding-bottom: 15px;
 	}
 	canvas {
 	   float: None;
 	}
-	
         
         #error {
             display: none;
