@@ -1,0 +1,21 @@
+body {
+    font-family: 'Roboto', sans-serif; /* or another clean sans-serif */
+    font-size: 15px;
+    color: #333; /* dark gray text */
+}
+
+a {
+    color: #0066cc; /* blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004499; /* darker on hover */ 
+    text-decoration: underline;
+} 
+
+.container {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
