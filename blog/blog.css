@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif; /* or another clean sans-serif */
     font-size: 15px;
     color: #333; /* dark gray text */
+    padding: 0 5%;
 }
 
 a {
