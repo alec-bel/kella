@@ -24,6 +24,10 @@ const photoData = [
     { src: "../img/film/19/8.jpg", camera: CAMERAS.NIKON, location: "Seaside, OR" },
     { src: "../img/film/19/11.jpg", camera: CAMERAS.NIKON, location: "Seaside, OR" },
     { src: "../img/film/19/7.jpg", camera: CAMERAS.NIKON, location: "Seaside, OR" },
+    { src: "../img/film/18/1.jpg", camera: CAMERAS.OLYMPUS, location: "Portland, OR" },
+    { src: "../img/film/18/2.jpg", camera: CAMERAS.OLYMPUS, location: "Portland, OR" },
+    { src: "../img/film/18/3.jpg", camera: CAMERAS.OLYMPUS, location: "Tumalo Falls, OR" },
+    { src: "../img/film/18/4.jpg", camera: CAMERAS.OLYMPUS, location: "Tumalo Falls, OR" },
 ];
 
 // Render gallery dynamically
