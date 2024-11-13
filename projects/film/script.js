@@ -26,11 +26,6 @@ const photoData = [
     { src: "../img/film/19/7.jpg", camera: CAMERAS.NIKON, location: "Seaside, OR" },
 ];
 
-// Determine the number of columns based on screen width
-function getColumnCount() {
-    return window.innerWidth < 768 ? 2 : 4;
-}
-
 // Render gallery dynamically
 function renderGallery(data) {
     const gallery = document.getElementById('gallery');
@@ -95,9 +90,15 @@ function lazyLoadImages() {
     images.forEach(img => observer.observe(img));
 }
 
-// Initialize the gallery on page load and resize
+// Determine the number of columns based on screen width
+function getColumnCount() {
+    return window.innerWidth < 768 ? 2 : 4;
+}
+
+// Variable for determing if resize needed
 let columnWidth = null
 
+// Initialize the gallery on page load and resize
 function initializeGallery() {
     if (columnWidth == null) { 
         renderGallery(photoData);
@@ -112,3 +113,19 @@ function initializeGallery() {
 
 window.addEventListener('DOMContentLoaded', initializeGallery);
 window.addEventListener('resize', initializeGallery);
+
+// Stop hover effects when scrolling
+let isScrolling;
+
+function handleScroll() {
+    document.body.classList.add('no-hover');
+
+    clearTimeout(isScrolling);
+
+    // Remove the class 500ms after scrolling stops
+    isScrolling = setTimeout(() => {
+        document.body.classList.remove('no-hover');
+    }, 500);
+}
+
+window.addEventListener('scroll', handleScroll);

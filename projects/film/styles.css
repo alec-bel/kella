@@ -69,3 +69,17 @@
     transition: .3s;
 }
 
+/* Disable hover effects when scrolling */
+.no-hover .gallery__image:hover {
+    transform: none;
+    filter: none;
+}
+
+.no-hover .gallery__link:hover .gallery__caption {
+    opacity: 0;
+}
+
+.no-hover .gallery:hover .gallery__image {
+    filter: none;
+}
+
