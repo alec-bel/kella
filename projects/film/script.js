@@ -35,6 +35,8 @@ function getColumnCount() {
 function renderGallery(data) {
     const gallery = document.getElementById('gallery');
     const columnCount = getColumnCount();
+    gallery.innerHTML = ''; // Clear existing content
+
     const columns = Array.from({ length: columnCount }, () => []);
 
     data.forEach((photo, index) => {
@@ -55,7 +57,7 @@ function renderGallery(data) {
             figure.classList.add('gallery__thumb');
 
             const img = document.createElement('img');
-            img.dataset.src = photo.src; // Store src for lazy loading
+            img.dataset.src = photo.src;
             img.alt = `${photo.camera} | ${photo.location}`;
             img.classList.add('gallery__image', 'lazy');
 
@@ -93,10 +95,19 @@ function lazyLoadImages() {
     images.forEach(img => observer.observe(img));
 }
 
-// Initialize the gallery on page load and window resize
+// Initialize the gallery on page load and resize
+let columnWidth = null
+
 function initializeGallery() {
-    document.getElementById('gallery').innerHTML = ''; // Clear existing content
-    renderGallery(photoData);
+    if (columnWidth == null) { 
+        renderGallery(photoData);
+        columnWidth = getColumnCount()
+    }
+    else if (columnWidth != getColumnCount()) {
+        document.getElementById('gallery').innerHTML = ''; // Clear existing content
+        renderGallery(photoData);
+        columnWidth = getColumnCount()
+    }
 }
 
 window.addEventListener('DOMContentLoaded', initializeGallery);
