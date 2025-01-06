@@ -28,6 +28,18 @@ const photoData = [
     { src: "../img/film/18/2.jpg", camera: CAMERAS.OLYMPUS, location: "Portland, OR" },
     { src: "../img/film/18/3.jpg", camera: CAMERAS.OLYMPUS, location: "Tumalo Falls, OR" },
     { src: "../img/film/18/4.jpg", camera: CAMERAS.OLYMPUS, location: "Tumalo Falls, OR" },
+    { src: "../img/film/18/5.jpg", camera: CAMERAS.OLYMPUS, location: "Red Rocks, NV" },
+    { src: "../img/film/18/6.jpg", camera: CAMERAS.OLYMPUS, location: "Zion, UT" },
+    { src: "../img/film/18/7.jpg", camera: CAMERAS.OLYMPUS, location: "Zion, UT" },
+    { src: "../img/film/18/8.jpg", camera: CAMERAS.OLYMPUS, location: "Zion, UT" },
+    { src: "../img/film/16/1.jpg", camera: CAMERAS.OLYMPUS, location: "Plainview, OR" },
+    { src: "../img/film/16/2.jpg", camera: CAMERAS.OLYMPUS, location: "Willamette Forest, OR"},
+    { src: "../img/film/16/3.jpg", camera: CAMERAS.OLYMPUS, location: "Plainview, OR" },
+    { src: "../img/film/16/4.jpg", camera: CAMERAS.OLYMPUS, location: "Willamette Forest, OR"},
+    { src: "../img/film/13/1.jpg", camera: CAMERAS.PENTAX, location: "Mount Bachelor, OR" },
+    { src: "../img/film/16/7.jpg", camera: CAMERAS.OLYMPUS, location: "Willamette Forest, OR"},
+    { src: "../img/film/16/6.jpg", camera: CAMERAS.CANON, location: "Mount Rainer, OR"},
+    { src: "../img/film/16/5.jpg", camera: CAMERAS.OLYMPUS, location: "Willamette Forest, OR"},
 ];
 
 // Render gallery dynamically
