@@ -51,10 +51,6 @@
     transition: opacity 0.5s;
 }
 
-.gallery__image:hover {
-    transform: scale(1.1);
-}
-
 .gallery__caption {
     position: absolute;
     bottom: 0;

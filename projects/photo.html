@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="film/styles.css">
+  <title>Photo Detail</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fff;
+    }
+    img {
+      max-width: 70%;
+      max-height: 70%;
+    }
+    .back {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      background-color: #f4f4f4;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    .back:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <a href="gallery.html" class="back">← Back to Gallery</a>
+  <img id="photo" src="" alt="Selected Photo">
+  <script src="film/photos.js"></script>
+  <script>
+  // Get the 'id' from the URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  let photoId = parseInt(urlParams.get('id')); // e.g., ?id=2
+
+  // Find the photo object that matches the id
+  const photo = photoData.find(p => p.id === photoId);
+
+  // Get the photo container div
+  const photoContainer = document.getElementById('photo');
+
+  // If a matching photo is found, display it
+  if (photo) {
+    photoContainer.src = photo.src;
+    photoContainer.alt = `Camera: ${photo.camera}, Location: ${photo.location}`;
+
+    // Optionally, display the camera and location info below the image
+    const photoInfo = document.createElement('p');
+    photoInfo.textContent = `Camera: ${photo.camera}, Location: ${photo.location}`;
+
+  } else {
+    //photoContainer.textContent = "Photo not found.";
+  }
+
+  // Listen for left and right arrow key presses
+  window.addEventListener('keydown', function(event) {
+    // Check for left and right arrow keys (key codes: 37 = left, 39 = right)
+    if (event.key === "ArrowLeft") {
+      // Decrement photoId by 1 (previous photo)
+      const prevPhoto = photoData.find(p => p.id === photoId - 1);
+      if (prevPhoto) {
+        photoId--; // Update the id
+        updatePhoto(); // Update the displayed photo
+      }
+    } else if (event.key === "ArrowRight") {
+      // Increment photoId by 1 (next photo)
+      const nextPhoto = photoData.find(p => p.id === photoId + 1);
+      if (nextPhoto) {
+        photoId++; // Update the id
+        updatePhoto(); // Update the displayed photo
+      }
+    }
+  });
+
+  // Function to update the photo based on the current photoId
+  function updatePhoto() {
+    const newPhoto = photoData.find(p => p.id === photoId);
+    if (newPhoto) {
+      // Update the image source and description
+      photoContainer.src = newPhoto.src;
+      photoContainer.alt = `Camera: ${newPhoto.camera}, Location: ${newPhoto.location}`;
+      history.pushState(null, null, `?id=${photoId}`);
+    }
+  }
+</script>
+</body>
+</html>
+
