@@ -42,8 +42,12 @@ const photoData = [
     { src: "/img/film/16/5.jpg", camera: CAMERAS.OLYMPUS, location: "Willamette Forest, OR"},
     { src: "/img/film/15/1.jpg", camera: CAMERAS.PENTAX, location: "Bend, OR"},
     { src: "/img/film/15/2.jpg", camera: CAMERAS.PENTAX, location: "Bend, OR"},
-    { src: "/img/film/15/3.jpg", camera: CAMERAS.PENTAX, location: "Santa Cruz, OR"},
-    { src: "/img/film/15/4.jpg", camera: CAMERAS.PENTAX, location: "Santa Cruz, OR"},
+    { src: "/img/film/15/3.jpg", camera: CAMERAS.PENTAX, location: "Santa Cruz, CA"},
+    { src: "/img/film/15/4.jpg", camera: CAMERAS.PENTAX, location: "Santa Cruz, CA"},
+    { src: "/img/film/15/5.jpg", camera: CAMERAS.PENTAX, location: "Folsom, CA"},
+    { src: "/img/film/15/6.jpg", camera: CAMERAS.PENTAX, location: "Folsom, CA"},
+    { src: "/img/film/15/7.jpg", camera: CAMERAS.PENTAX, location: "Folsom, CA"},
+    { src: "/img/film/15/8.jpg", camera: CAMERAS.PENTAX, location: "Folsom, CA"},
 ];
 
 photoData.forEach((photo, index) => {
