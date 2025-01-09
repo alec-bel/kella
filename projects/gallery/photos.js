@@ -8,14 +8,14 @@ const CAMERAS = {
 
 // Array of photos with metadata (camera, location, and src)
 const photoData = [ 
-    { src: "/img/film/0026_26.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
-    { src: "/img/film/flag_house.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
-    { src: "/img/film/0027_27.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
-    { src: "/img/film/0031_31.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
-    { src: "/img/film/seiko_clock.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
-    { src: "/img/film/boating.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
-    { src: "/img/film/river_mountain.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
-    { src: "/img/film/2_boys_in_a_boat.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/1.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/2.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/3.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/4.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/5.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/6.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/7.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
+    { src: "/img/film/20/8.jpg", camera: CAMERAS.PENTAX, location: "Kyoto, Japan" },
     { src: "/img/film/19/6.jpg", camera: CAMERAS.NIKON, location: "Seaside, OR" },
     { src: "/img/film/19/24.jpg", camera: CAMERAS.NIKON, location: "Seaside, OR" },
     { src: "/img/film/19/9.jpg", camera: CAMERAS.NIKON, location: "Seaside, OR" },
@@ -40,6 +40,10 @@ const photoData = [
     { src: "/img/film/16/7.jpg", camera: CAMERAS.OLYMPUS, location: "Willamette Forest, OR"},
     { src: "/img/film/16/6.jpg", camera: CAMERAS.CANON, location: "Mount Rainer, OR"},
     { src: "/img/film/16/5.jpg", camera: CAMERAS.OLYMPUS, location: "Willamette Forest, OR"},
+    { src: "/img/film/15/1.jpg", camera: CAMERAS.PENTAX, location: "Bend, OR"},
+    { src: "/img/film/15/2.jpg", camera: CAMERAS.PENTAX, location: "Bend, OR"},
+    { src: "/img/film/15/3.jpg", camera: CAMERAS.PENTAX, location: "Santa Cruz, OR"},
+    { src: "/img/film/15/4.jpg", camera: CAMERAS.PENTAX, location: "Santa Cruz, OR"},
 ];
 
 photoData.forEach((photo, index) => {
