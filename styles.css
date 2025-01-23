@@ -8,24 +8,24 @@ html, body {
 h1, h2, p {
     font-family: Verdana, Geneva, sans-serif;
     font-weight: normal;
-    color: 	whitesmoke;
+    color: 	rgb(255, 255, 255);
 }
 
 a {
 	text-decoration: none;
-    color: 	whitesmoke;
+    color: 	rgb(255, 255, 255);
 }
 
 .background {
     height: 100%;
-    background-image: url("img/background.jpg");
+    background-image: url("images/hiking-garibaldi.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .fa {
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     font-size: 30px;
     padding: 20px;
 }
