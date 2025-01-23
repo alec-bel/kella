@@ -1,4 +1,4 @@
-Personal Website with social links.
+Personal Website
 
 [github](https://github.com/alec-bel)
 
