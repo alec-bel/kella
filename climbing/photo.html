@@ -55,12 +55,13 @@
 
   // If a matching photo is found, display it
   if (photo) {
+    
     photoContainer.src = photo.src;
-    photoContainer.alt = `Camera: ${photo.camera}, Location: ${photo.location}`;
+    photoContainer.alt = `Location: ${photo.location} - Date: ${photo.date}`;
 
-    // Optionally, display the camera and location info below the image
+    // Optionally, display the location and date info below the image
     const photoInfo = document.createElement('p');
-    photoInfo.textContent = `Camera: ${photo.camera}, Location: ${photo.location}`;
+    photoInfo.textContent = `Location: ${photo.location} - Date: ${photo.date}`;
 
   } else {
     //photoContainer.textContent = "Photo not found.";
@@ -92,10 +93,12 @@
     if (newPhoto) {
       // Update the image source and description
       photoContainer.src = newPhoto.src;
-      photoContainer.alt = `Camera: ${newPhoto.camera}, Location: ${newPhoto.location}`;
+      photoContainer.alt = `Location: ${newPhoto.location} - Date: ${newPhoto.date} `;
       history.pushState(null, null, `?id=${photoId}`);
     }
   }
+
+  // TODO: add function to display photo metadata
 </script>
 </body>
 </html>

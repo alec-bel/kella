@@ -44,12 +44,12 @@
 
                     const img = document.createElement('img');
                     img.dataset.src = photo.src;
-                    img.alt = `${photo.camera} | ${photo.location}`;
+                    img.alt = `${photo.location} | ${photo.date}`;
                     img.classList.add('gallery__image', 'lazy');
 
                     const caption = document.createElement('figcaption');
                     caption.classList.add('gallery__caption');
-                    caption.textContent = `${photo.camera} | ${photo.location}`;
+                    caption.textContent = `${photo.location} | ${photo.date}`;
 
                     figure.appendChild(img);
                     figure.appendChild(caption);
