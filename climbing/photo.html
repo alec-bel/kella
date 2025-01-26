@@ -56,7 +56,7 @@
   // If a matching photo is found, display it
   if (photo) {
     
-    photoContainer.src = photo.src;
+    photoContainer.src = photo.fullSrc;
     photoContainer.alt = `Location: ${photo.location} - Date: ${photo.date}`;
 
     // Optionally, display the location and date info below the image
@@ -92,7 +92,7 @@
     const newPhoto = photoData.find(p => p.id === photoId);
     if (newPhoto) {
       // Update the image source and description
-      photoContainer.src = newPhoto.src;
+      photoContainer.src = newPhoto.fullSrc;
       photoContainer.alt = `Location: ${newPhoto.location} - Date: ${newPhoto.date} `;
       history.pushState(null, null, `?id=${photoId}`);
     }

@@ -1,7 +1,6 @@
 
 // Array of photos with metadata (src, location, date, size)
 const photoData = [ 
-
     { src: "/images/photo-gallery/river-beauty-willowherb-glacier-slice-1-1.png", location: "Russel Glacier, Greenland", date: "June, 2019", width: 2, height: 2 },
     { src: "/images/photo-gallery/river-beauty-willowherb-glacier-slice-1-2.png", location: "Russel Glacier, Greenland", date: "June, 2019", width: 2, height: 2 },  
     { src: "/images/photo-gallery/cascade-canyon-grand-teton-slice-1-1.png", location: "Grand Teton National Park, WY", date: "July, 2023", width: 1, height: 2 },
@@ -22,7 +21,29 @@ const photoData = [
     { src: "/images/photo-gallery/antarctica-mountains-slice-1-3.png", location: "Antarctica", date: "January 2015", width: 3, height: 1 }, 
 ];
 
+const fullPhotoData = [
+    { src: "/images/photo-gallery/giant-leopard-moth.png", location: "Red River Gorge, KY", date: "July, 2017"},
+    { src: "/images/photo-gallery/river-beauty-willowherb-glacier.png", location: "Russel Glacier, Greenland", date: "June, 2019"},
+    { src: "/images/photo-gallery/cascade-canyon-grand-teton.png", location: "Grand Teton National Park, WY", date: "July, 2023"},
+    { src: "/images/photo-gallery/mt-hood-wilderness-reflection.png", location: "Mt Hood Wilderness", date: "July, 2019" },
+    { src: "/images/photo-gallery/trail-ten-falls-0.png", location: "Trail of Ten Falls, OR", date: "March, 2021"},
+    { src: "/images/photo-gallery/desert-tortoise.png", location: "Joshua Tree National Park, CA", date:  "April, 2023" },
+    { src: "/images/photo-gallery/antarctica-mountains.png", location: "Antarctica", date: "January 2015" },
+]
+
+let fullPhotos = {};
+
+fullPhotoData.forEach((photo) => {
+  fullPhotos[photo.src] = photo;
+});
+
 photoData.forEach((photo, index) => {
-  photo.id = index + 1; // Add a unique ID starting from 1
+  if (photo.src.includes('-slice')) {
+    const photoName = photo.src.split('-slice')[0] + ".png";
+    photo.fullSrc = fullPhotos[photoName].src;
+  } else {
+    photo.fullSrc = photo.src;
+  }
+  photo.id = index+1;
 });
 
