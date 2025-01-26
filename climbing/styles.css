@@ -11,17 +11,17 @@
 .gallery__column {
     display: flex;
     flex-direction: column;
-    width: 25%; /* Default: 4 columns (25% each) */
+    width: 33%; /* Default: 3 columns (33% each) */
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .gallery__column {
-        width: 50%; /* Switch to 2 columns (50% each) */
+        width: 50%; 
     }
-}
+} */
 
 .gallery__link {
-    margin: 2px;
+    margin: 0px;
     overflow: hidden;
 }
 
